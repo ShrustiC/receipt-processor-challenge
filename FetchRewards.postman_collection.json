@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "7afe7854-9bd3-4390-8cbb-7cdc3a134d40",
+		"name": "FetchRewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20287394"
+	},
+	"item": [
+		{
+			"name": "Process Receipt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"retailer\": \"Walgreens\",\n    \"purchaseDate\": \"20220102\",\n    \"purchaseTime\": \"08:13\",\n    \"total\": \"2.65\",\n    \"items\": [\n        {\"shortDescription\": \"Pepsi - 12-oz\", \"price\": \"1.25\"},\n        {\"shortDescription\": \"Dasani\", \"price\": \"1.40\"}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/receipts/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/receipts/fa83a994-abc1-42a1-a24f-d550df2ff71c/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"receipts",
+						"fa83a994-abc1-42a1-a24f-d550df2ff71c",
+						"points"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

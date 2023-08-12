@@ -5,10 +5,14 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Automating all manual steps hereafter
+# Copying Maven Wrapper and POM
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
+
+#Downloading maven dependencies
 RUN ./mvnw dependency:go-offline
 
+#Copying application source code
 COPY src ./src
 
 # Starting the application

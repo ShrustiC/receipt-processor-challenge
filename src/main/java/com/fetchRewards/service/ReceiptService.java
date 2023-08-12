@@ -96,7 +96,6 @@ public class ReceiptService {
         int points = 0;
         double totalAmount = Double.parseDouble(total);
 
-        // Round dollar amount with no cents
         if (totalAmount != 0 && totalAmount == Math.floor(totalAmount)) {
             points += 50;
         }
@@ -128,7 +127,6 @@ public class ReceiptService {
 
     /* Rule : If the trimmed length of the item description is a multiple of 3, multiply the price
               by 0.2 and round up to the nearest integer. The result is the number of points earned */
-
     private int ItemDescriptionLengthRewards(List<Item> items){
 
         int points = 0;
@@ -177,7 +175,6 @@ public class ReceiptService {
     }
 
     public String generateUniqueId() {
-
         // id generation logic goes here
         UUID uniqueId = UUID.randomUUID();
         return uniqueId.toString();
