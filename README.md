@@ -37,9 +37,9 @@ Steps to clone the repository, build the Docker image, and run the application:
 5. Server starts on http://localhost:8080
 ---
 
-## Run the application 
+## Test the application 
 ### POST request
-Run the following command to POST the receipt
+Open a new terminal window. Run the following command to POST the receipt
 
 ```bash
     curl -X POST -H "Content-Type: application/json" -d '{
@@ -53,17 +53,7 @@ Run the following command to POST the receipt
     },{
       "shortDescription": "Emils Cheese Pizza",
       "price": "12.25"
-    },{
-      "shortDescription": "Knorr Creamy Chicken",
-      "price": "1.26"
-    },{
-      "shortDescription": "Doritos Nacho Cheese",
-      "price": "3.35"
-    },{
-      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
-      "price": "12.00"
-    }
-    ],
+    }],
      "total": "35.35"
     }' http://localhost:8080/receipts/process
 ```
@@ -80,10 +70,10 @@ curl -X GET http://localhost:8080/receipts/1880b0d3-ddf5-4370-9537-d86c88c2d201/
 ```
 Example Response:
 ```json
-{ "points": 28 }
+{ "points": 20 }
 ```
 
-### Test appliication using Postman
+### Test application using Postman
 
 If Postman is installed in your system 
 
